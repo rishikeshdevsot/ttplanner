@@ -1,3 +1,6 @@
+#All the constant values, chose October 2018 because it starts with a monday
+
+
 MONDAY = 1
 TUESDAY = 2
 WEDNESDAY = 3
