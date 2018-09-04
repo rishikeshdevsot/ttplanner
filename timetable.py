@@ -40,5 +40,14 @@ class Year:
         elif(selCourse.bothSem == "Winter"):
             self.Winter.addCourse(selCourse)
         else:
-            self.Winter.addCourse(selCourse)
-            self.Fall.addCourse(selCourse)
+            if(selCourse.crcCode[-1:] == "F"):
+                self.Fall.addCourse(selCourse)
+            elif(selCourse.crcCode[-1:] == "S"):
+                self.Winter.addCourse(selCourse)
+            elif(selCourse.crcCode[-1:] == "Y"):
+                self.Winter.addCourse(selCourse)
+                self.Fall.addCourse(selCourse)
+            else:
+                return -1
+
+                
